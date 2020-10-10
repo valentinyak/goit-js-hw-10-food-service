@@ -27,6 +27,7 @@ refs.checkbox.addEventListener('input', () => {
 function checkCurrentTheme() {
   if (localStorage.getItem('userTheme') === null) {
     localStorage.setItem('userTheme', Theme.LIGHT);
+    return;
   }
   if (localStorage.getItem('userTheme') === Theme.DARK) {
     document.body.classList.add('dark-theme');
